@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* ===== BOTÃO PDF ===== */
+.download-btn
+{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(90deg, #0a66c2, #00c6ff);
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 50px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.download-btn:hover
+{
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+}
+
+@media print
+{
+    .download-btn
+    {
+        display: none;
+    }
+}
+
+body
+{
+    background: #f3f5f7;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.container
+{
+    position: relative;
+    width: 100%;
+    max-width: 1150px;
+    min-height: 1000px;
+    background: #ffffff;
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+.container .left_Side
+{
+    position: relative;
+    background: linear-gradient(180deg, #0a66c2, #003147);
+    padding: 40px;
+}
+.profileText
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.profileText .imgBx
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgba(255,255,255,0.25);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.profileText .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profileText h2
+{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profileText h2 span
+{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contatos
+{
+    padding-top: 40px;
+}
+.title
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contatos ul
+{
+    position: relative;
+}
+.contatos ul li
+{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contatos ul li .icon
+{
+    display: inline-block;
+    width: 20px;
+    font-size: 18px;
+    color: #002f44;
+}
+.contatos ul li span
+{
+    color: #fff;
+    font-weight: 300;
+}
+.contatos ul li a
+{
+    color: #003147;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.contatos ul li a:hover
+{
+    color: #8fd3ff;
+}
+
+.formacao
+{
+    padding-top: 40px;
+}
+.formacao li
+{
+    margin-bottom: 15px;
+}
+.formacao h5
+{
+    color: #03a9f4;
+    font-weight: 500;
+}
+.formacao h4:nth-child(2)
+{
+    color: #fff;
+    font-weight: 500;
+}
+.formacao h4
+{
+    color: #fff;
+    font-weight: 300;
+}
+.idioma
+{
+    color: #fff;
+    padding-top: 40px;
+}
+.idioma .nivel
+{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.idioma .nivel div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #0a66c2, #00c6ff);
+}
+.habilitacao
+{
+    padding-top: 40px;
+}
+.habilitacao .text
+{
+    color: #fff;
+}
+
+.habilidadesps
+{
+    color: #fff;
+    padding-top: 40px;
+}
+.habilidadesps .nivel
+{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.habilidadesps .nivel div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #0a66c2, #00c6ff);
+}
+
+.container .right_Side
+{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+.sobre
+{
+    margin-bottom: 30px;
+}
+.sobre:last-child
+{
+    margin-bottom: 0;
+}
+.title2
+{
+    color: #0a66c2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+    font-size: 1.3em;
+    border-left: 5px solid #0a66c2;
+    padding-left: 12px;
+}
+p
+{
+    color: #333;
+    line-height: 1.5;
+}
+.experience .company
+{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    background: #fafafa;
+    padding: 18px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    border: 1px solid #ececec;
+}
+.experience .company:hover
+{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+.experience .company .year_company
+{
+    min-width: 150px;
+}
+.experience .company .year_company h5
+{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.experience .company .text h4
+{
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+}
+.skills
+{
+    padding-top: 30px;
+}
+.skills .habilidade
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.skills .habilidade h4
+{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
+.skills .habilidade .nivel
+{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+.skills .habilidade .nivel div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+.interests
+{
+    padding-top: 40px;
+}
+.interests ul
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.interests ul li
+{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+     background: #f4f6f8;
+    padding: 10px;
+    border-radius: 10px;
+}
+.interests ul li .fa
+{
+    color: #03a9f4;
+    font-size: 18px;
+    width: 20px;
+}
+
+@media (max-width: 1000px)
+{
+    .container
+    {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interests ul
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media (max-width: 600px)
+{
+    .experience .company
+    {
+        flex-direction: column;
+    }
+    .experience .company .year_company 
+    {
+        margin-bottom: 5px;
+    }
+    .interests ul
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skills .habilidade
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+/* ===== RESPONSIVIDADE MOBILE MELHORADA ===== */
+
+@media (max-width: 768px)
+{
+    body
+    {
+        background-position: center;
+        padding: 10px;
+    }
+
+    .container
+    {
+        width: 100%;
+        margin: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .container .left_Side,
+    .container .right_Side
+    {
+        padding: 25px;
+    }
+
+    .profileText .imgBx
+    {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profileText h2
+    {
+        font-size: 1.2em;
+    }
+
+    .title,
+    .title2
+    {
+        font-size: 1.2em;
+    }
+
+    p,
+    li,
+    h4,
+    h5,
+    span
+    {
+        font-size: 14px;
+    }
+
+    .experience .company
+    {
+        flex-direction: column;
+    }
+
+    .experience .company .year_company
+    {
+        margin-bottom: 10px;
+    }
+
+    .skills .habilidade
+    {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .skills .habilidade .nivel
+    {
+        height: 8px;
+    }
+
+    .interests ul
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .contatos ul li
+    {
+        word-break: break-word;
+    }
+
+    audio
+    {
+        width: 100%;
+    }
+
+/* ===== ANIMAÇÕES SUAVES ===== */
+.container,
+.experience .company,
+.skills .habilidade,
+.interests ul li
+{
+    transition: all 0.3s ease;
+}
+
+.experience .company:hover
+{
+    transform: translateY(-4px);
+}
+
+.skills .habilidade:hover
+{
+    transform: scale(1.01);
+}
+}
+/* ===== DARK MODE AUTOMÁTICO ===== */
+@media (prefers-color-scheme: dark)
+{
+    body
+    {
+        background: #0f172a;
+    }
+
+    .container
+    {
+        background: #111827;
+        color: #f1f5f9;
+    }
+
+    .container .right_Side
+    {
+        background: #111827;
+    }
+
+    p,
+    .interests ul li,
+    .skills .habilidade h4,
+    .experience .company .year_company h5
+    {
+        color: #e5e7eb;
+    }
+
+    .experience .company
+    {
+        background: #1e293b;
+        border: 1px solid #334155;
+    }
+
+    .interests ul li
+    {
+        background: #1e293b;
+    }
+
+    .skills .habilidade .nivel
+    {
+        background: #334155;
+    }
+
+    .title2
+    {
+        color: #38bdf8;
+        border-left: 5px solid #38bdf8;
+    }
+}/* ===== IMPRESSÃO E PDF ===== */
+
+@media print
+{
+    *
+    {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    body
+    {
+        background: #ffffff !important;
+    }
+
+    .container
+    {
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .download-btn,
+    audio
+    {
+        display: none !important;
+    }
+
+    .experience .company
+    {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        box-shadow: none;
+    }
+
+    /* ===== GARANTE AS BARRAS NO PDF ===== */
+
+    .skills .habilidade .nivel,
+    .idioma .nivel,
+    .habilidadesps .nivel
+    {
+        background: #d1d5db !important;
+        border: 1px solid #999;
+    }
+
+    .skills .habilidade .nivel div,
+    .idioma .nivel div,
+    .habilidadesps .nivel div
+    {
+        background: #0a66c2 !important;
+    }
+}
