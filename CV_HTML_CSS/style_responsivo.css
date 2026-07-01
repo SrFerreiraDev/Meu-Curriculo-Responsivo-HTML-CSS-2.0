@@ -32,9 +32,16 @@
 
 @media print
 {
-    .download-btn
+    body
     {
-        display: none;
+        background: #0f172a !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .container
+    {
+        background: #111827 !important;
     }
 }
 
